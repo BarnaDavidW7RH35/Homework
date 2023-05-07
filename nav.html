@@ -1,0 +1,18 @@
+<nav>
+    <ul>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="index.php?page=gallery">Introduction</a></li>
+        <li><a href="index.php?page=contact">Contact</a></li>
+        <li><?php
+        
+            if(isset($_SESSION['user'])){
+                echo '<a href="index.php?page=logout">Logout</a>';
+            }else{
+                echo '<a href="index.php?page=login">Login</a>';
+            }
+            
+            ?></li>
+        
+        
+    </ul>
+</nav>
