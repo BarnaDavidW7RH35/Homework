@@ -1,6 +1,7 @@
 <?php
     if(isset($_POST['username']) && isset($_POST['password'])) {
         try {
+            session_start();
             // Connecting
             $dbh = new PDO('mysql:host=localhost;dbname=databaselesson', 'root', '',array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
             $dbh->query('SET NAMES utf8 COLLATE utf8_general_ci');
@@ -15,12 +16,14 @@
                 $_SESSION['fn'] = $row['first_name']; 
                 $_SESSION['ln'] = $row['last_name']; 
                 $_SESSION['user'] = $_POST['username'];
-                header("Location://localhost/homework/index.php"); 
+                header("Location://localhost/homework/index.php");
             } 
             
         }
         catch (PDOException $e) {
             echo "Error: ".$e->getMessage();
         }      
+    }else{
+        header("Location: .");
     }
 ?>

@@ -56,3 +56,15 @@ footer {
     padding: 5px 20px;
     background-color: #CC99FF;
 }
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 15px 0px;
+}
+a {
+    text-decoration: none;
+    color: blue;
+}
+div#six {
+    text-align: left;
+}
