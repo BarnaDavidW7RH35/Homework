@@ -1,1 +1,5 @@
-Gallery
+<?php
+    if(isset($_SESSION['user'])){
+        echo '<input type="file"></input><br><input type="button" value="Feltöltés">';
+    }            
+?>
