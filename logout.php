@@ -4,5 +4,5 @@ unset($_SESSION["fn"]);
 unset($_SESSION["ln"]);
 unset($_SESSION["user"]);
 session_unset();
-header("Location://localhost/homework/index.php");
+header("Location:http://tdbolt.nhely.hu");
 ?>

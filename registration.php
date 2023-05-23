@@ -2,8 +2,8 @@
     if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['firstname']) && isset($_POST['lastname'])) {
         try {
             // Connecting
-            $dbh = new PDO('mysql:host=localhost;dbname=databaselesson', 'root', '', array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
-            $dbh->query('SET NAMES utf8 COLLATE utf8_general_ci');
+            $dbh = new PDO('mysql:host=localhost;dbname=taffid;charset=utf8', 'taffid', 'cicus123',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC));
+            //$dbh->query('SET NAMES utf8 COLLATE utf8_general_ci');
             
             // Does the username already exist?
             $sqlSelect = "select id from users where user_name = :username";
@@ -47,7 +47,7 @@
         <?php if(isset($message)) { ?>
             <h1><?= $message ?></h1>
             <?php if($again) { ?>
-                <a href="exercise.html">Try again!</a>
+                <a href="index.php?page=login">Try again!</a>
             <?php } ?>
         <?php } ?>
     </body>  

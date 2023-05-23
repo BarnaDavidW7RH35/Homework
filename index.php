@@ -26,7 +26,7 @@
                     if($_GET['page']=="six") include("six.html");
                     if($_GET['page']=="login") include("login.html"); 
                 }
-                else { include("home.html"); include("terkep.html"); }            
+                else { include("home.html"); include("terkep.html"); }           
             ?>
         </div>
     </div>
